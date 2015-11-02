@@ -1,10 +1,8 @@
-var path = require('path');
-
 var appRoot = 'app/';
 var outputRoot = 'dist/';
 
 module.exports = {
-  baseHref: '/',
+  baseHref: process.env.BASE_HREF ? process.env.BASE_HREF : '/',
   root: appRoot,
   scripts: appRoot + 'scripts/**/*.js',
   html: appRoot + 'scripts/**/*.html',

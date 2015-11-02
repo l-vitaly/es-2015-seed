@@ -20,6 +20,10 @@ gulp.task('serve', ['build'], function () {
     gulp.start('build-index', callback);
   }));
 
+  $.watch(paths.html, $.batch(function (event, callback) {
+    gulp.start('build-html', callback);
+  }));
+
   $.watch(paths.scripts, $.batch(function (event, callback) {
     gulp.start('build-js', callback);
   }));
