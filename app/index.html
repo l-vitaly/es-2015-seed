@@ -7,12 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="dist/css/main.css">
+  <link rel="stylesheet" href="dist/css/main.css<!-- @if IS_BUNDLE -->?cache-bust=<!-- @echo CACHE_BUST --><!-- @endif -->">
 </head>
 <body ui-view="">
 
 <!-- @if IS_BUNDLE -->
-<script type="text/javascript" src="dist/scripts/app-bundle.js"></script>
+<script type="text/javascript" src="dist/scripts/app-bundle.js?cache-bust=<!-- @echo CACHE_BUST -->"></script>
 <!-- @endif -->
 
 <!-- @if !IS_BUNDLE -->
