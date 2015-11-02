@@ -1,11 +1,13 @@
 var $ = require('gulp-load-plugins')();
 var gulp = require('gulp');
-var fs = require('fs');
+var plumber = require('gulp-plumber');
+var notify = require('gulp-notify');
 var paths = require('../paths');
 var options = require('options');
 
 gulp.task('build-index', function () {
   return gulp.src(paths.index)
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe($.preprocess({
       context: {
         BASE_HREF: paths.baseHref,
