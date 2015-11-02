@@ -1,6 +1,6 @@
 # Development Installation
 
-Install Docker: [http://docs.docker.com/mac/started)
+Install Docker: [http://docs.docker.com/mac/started](http://docs.docker.com/mac/started)
 
 Installation NodeJs (OS X):
 

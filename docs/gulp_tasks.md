@@ -4,8 +4,10 @@
 
 ```
 build
+bundle
+unbundle
 clean
-jshint
+lint
 list
 serve
 ```
@@ -13,9 +15,10 @@ serve
 ## Sub Tasks
 
 ```
-compile-bundle
-compile-index
-compile-sass
+build-sfx
+build-index
+build-sass
+build-html
 copy-fonts
 copy-images
 ```

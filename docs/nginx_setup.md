@@ -1,19 +1,4 @@
-# Nginx Setup
-
-
-## Dev: 
-
-``` nginx
-server {
-    listen 80;
-    root /var/www;
-    index index.html;
-
-    include mime.types;
-}
-```
-
-## Prod: 
+# Nginx Setup 
 
 ``` nginx
 server {
