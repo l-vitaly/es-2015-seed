@@ -1,0 +1,24 @@
+@import
+  'vendors/materialize';
+
+@import
+  'utils/variables',
+  'utils/functions',
+  'utils/mixins',
+  'utils/helpers';
+
+@import
+  'base/base',
+  'base/reset',
+  'base/typography';
+
+@import
+  'layout/header',
+  'layout/footer';
+
+//@import
+//  'components/componentName';
+
+@import
+  'pages/index',
+  'pages/authors';

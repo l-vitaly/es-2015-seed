@@ -1,0 +1,21 @@
+/* font-family: "SquareSansPro"; */
+@font-face {
+  @include squareSansPro-bold();
+  src: url("../fonts/pfSquareSansPro/pfsquaresanspro-bold-webfont.woff") format("woff");
+}
+@font-face {
+  @include squareSansPro-regular();
+  src: url("../fonts/pfSquareSansPro/pfsquaresanspro-regular-webfont.woff") format("woff");
+}
+@font-face {
+  @include squareSansPro-italic();
+  src: url("../fonts/pfSquareSansPro/pfsquaresanspro-italic-webfont.woff") format("woff");
+}
+@font-face {
+  @include squareSansPro-light();
+  src: url("../fonts/pfSquareSansPro/pfsquaresanspro-light-webfont.woff") format("woff");
+}
+@font-face {
+  @include squareSansPro-thin();
+  src: url("../fonts/pfSquareSansPro/pfsquaresanspro-thin-webfont.woff") format("woff");
+}

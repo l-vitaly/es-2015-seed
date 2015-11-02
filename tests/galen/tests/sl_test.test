@@ -1,0 +1,20 @@
+@@ set
+    gridLogin       ${sauceUser}:${sauceKey}
+    gridUrl         http://${gridLogin}@ondemand.saucelabs.com:80/wd/hub
+
+@@ table browsers
+     | browserName   | gridArgs                                                               |
+     | Safari on Mac | --browser "safari" --version 6   --dc.platform "OS X 10.8"             |
+     | Firefox       | --browser "firefox" --version 37 --dc.platform "Windows 7"             |
+     | Chrome        | --browser "chrome" --version 40 --dc.platform "Windows 7"              |
+     | IE 10         | --browser "internet explorer" --version 10 --dc.platform "Windows 7"   |
+     | IE 11         | --browser "internet explorer" --version 11 --dc.platform "Windows 7"   |
+
+@@ parameterized
+    | url                        |
+    | /                          |
+
+@@ parameterized using browsers
+Header on ${browserName}
+    selenium grid ${gridUrl} --page http://${domain}${url} ${gridArgs}
+        check tests/galen/specs/header.spec --include "${tags}"

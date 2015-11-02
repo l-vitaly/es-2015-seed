@@ -1,0 +1,3 @@
+node_modules/**/*
+jspm_packages/**/*
+app/scripts/_templates.js

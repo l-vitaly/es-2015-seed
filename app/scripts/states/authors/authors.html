@@ -1,0 +1,17 @@
+<div class="header" layout="row" layout-align="end center" layout-padding>
+  <md-button class="md-primary md-raised" href="" ui-sref="index">
+    Go Index
+  </md-button>
+</div>
+
+<div class="authors" layout="column" layout-align="center center" layout-fill>
+  <div class="author md-whiteframe-z1" ng-repeat="author in ctrlAuthors.authors">
+    <h1 class="md-display-2" ng-bind="author.name"></h1>
+    <small class="work" ng-bind="author.work"></small>
+    <div class="footer" layout="row" layout-align="end center">
+      <md-button class="md-accent md-raised" href ng-href="{{ 'mailto:' + author.email }}" ng-bind="author.email" aria-label="{{author.email}}"></md-button>
+    </div>
+  </div>
+</div>
+
+

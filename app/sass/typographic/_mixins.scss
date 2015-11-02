@@ -1,0 +1,38 @@
+// UTIL: typographic (
+//1.        font-size (:Pixels),
+//2.        line-height (:Pixels),
+//3.        letter-spacing (tracking:Int),
+//4.        scale (:Float)
+//       );
+@mixin typographic($fontSize, $lineHeight, $letterSpacing, $scale) {
+
+  font-size:      round( $fontSize * $scale ) !important;
+  line-height:    ( $lineHeight / $fontSize ) + 0em !important;
+  letter-spacing: ( $letterSpacing / 1000 )   + 0em !important;
+}
+
+@mixin squareSansPro-bold(){
+  font-family: "SquareSansPro";
+  font-style: normal;
+  font-weight: 600;
+}
+@mixin squareSansPro-regular(){
+  font-family: "SquareSansPro";
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin squareSansPro-italic(){
+  font-family: "SquareSansPro";
+  font-style: italic;
+  font-weight: 400;
+}
+@mixin squareSansPro-light(){
+  font-family: "SquareSansPro";
+  font-style: normal;
+  font-weight: 300;
+}
+@mixin squareSansPro-thin(){
+  font-family: "SquareSansPro";
+  font-style: normal;
+  font-weight: 200;
+}

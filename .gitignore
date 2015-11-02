@@ -1,0 +1,10 @@
+.DS_Store
+npm-debug.log
+/.idea
+/.sass-cache
+/jspm_packages
+/node_modules
+/index.html
+/galen-reports
+/docker-compose.yml
+/dist
