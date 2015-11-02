@@ -1,8 +1,10 @@
 var $ = require('gulp-load-plugins')();
 var argv = $.util.env;
 var isDebug = !!argv.debug;
+var cacheBust = Math.round(new Date() / 1000);
 
 module.exports = {
+  cacheBust: cacheBust,
   isDebug: isDebug,
   isBundle: false,
   autoprefixer: {

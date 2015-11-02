@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
-var options = require('options');
+var options = require('../options');
+
 /**
  * Compile bundle
  */
