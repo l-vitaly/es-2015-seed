@@ -34,13 +34,13 @@ To build the bundle, execute the command:
 
 To unbundle: 
 
-```
+``` console
 ./gulp unbundle
 ```
 
 # Live Reload
 
-```
+``` console
 gulp
 ```
 
@@ -90,7 +90,7 @@ To run test on SauceLabs make sure environment variables `SAUCE_USERNAME` and `S
 |`gulp build-index`|Build main index.html file|
 |`gulp build-sfx`|Build SFX bundle|
 |`gulp clean-sfx`|Remove SFX bundle file|
-|`gulp lint`|Run ESLint (http://eslint.org)[http://eslint.org]|
+|`gulp lint`|Run ESLint [http://eslint.org](http://eslint.org)|
 
 # Used Technologies and Components
 
