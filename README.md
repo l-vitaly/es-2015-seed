@@ -23,6 +23,15 @@ docker-compose up -d
 export GULP_SERVE_URL=http://you.docker.ip.address:16500
 ./gulp serve
 ```
+# Base Href
+
+To set the value of base href, use the environment variable BASE_HREF
+
+Example: 
+
+``` console
+export BASE_HREF="/web-app/" && ./gulp build
+```
 
 # Build Bundle
  
