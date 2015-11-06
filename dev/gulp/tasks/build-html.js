@@ -5,7 +5,7 @@ var options = require('../options');
 
 gulp.task('build-html', function () {
   return gulp.src(paths.html)
-    .pipe($.changed(paths.output.html, {extension: '.html'}))
+    .pipe($.changed(paths.html, {extension: '.html'}))
     .pipe($.minifyHtml(options.minifyHtml))
     .pipe(gulp.dest(paths.output.html));
 });
