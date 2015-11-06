@@ -91,14 +91,12 @@ To run test on SauceLabs make sure environment variables `SAUCE_USERNAME` and `S
 |:--|:--|
 |`gulp clean`|Deletes all files in the output path|
 |`gulp serve` _(default)_|Launch with live reload|
-|`gulp bundle`|Bundle for production|
-|`gulp unbundle`|Unbundle for development|
+|`gulp bundle`|Create SFX bundle for production|
 |`gulp build`|Build for development|
 |`gulp build-html`|Build html templates|
 |`gulp build-sass`|Build SASS files|
 |`gulp build-index`|Build main index.html file|
 |`gulp build-sfx`|Build SFX bundle|
-|`gulp clean-sfx`|Remove SFX bundle file|
 |`gulp lint`|Run ESLint [http://eslint.org](http://eslint.org)|
 
 # Used Technologies and Components
