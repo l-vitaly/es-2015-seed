@@ -41,10 +41,10 @@ To build the bundle, execute the command:
 ./gulp bundle
 ```
 
-To unbundle: 
+# Build development: 
 
 ``` console
-./gulp unbundle
+./gulp build
 ```
 
 # Live Reload
