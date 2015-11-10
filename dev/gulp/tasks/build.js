@@ -9,7 +9,8 @@ gulp.task('build', function (callback) {
   runSequence(
     'clean',
     'lint',
-    ['build-js', 'build-html', 'build-sass', 'build-index', 'copy-fonts', 'copy-images'],
+    ['copy-fonts', 'copy-images'],
+    ['build-js', 'build-html', 'build-index', 'build-sass'],
     callback
   );
 });
