@@ -5,8 +5,7 @@ var notify = require("gulp-notify");
 var paths = require('../paths');
 var options = require('../options');
 /**
- * Generate CSS from SASS
- * Build sourcemaps
+ * Build SASS
  */
 gulp.task('build-sass', function () {
 

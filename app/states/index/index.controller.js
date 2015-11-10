@@ -13,7 +13,8 @@ export function indexRoute(stateProvider) {
   stateProvider
     .state('index', {
       url: '/',
-      templateUrl: 'scripts/states/index/index.html',
+      parent: 'layoutMain',
+      templateUrl: 'states/index/index.html',
       controller: 'IndexController',
       controllerAs: 'ctrlIndex'
     })
