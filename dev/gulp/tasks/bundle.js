@@ -10,8 +10,10 @@ gulp.task('bundle', function (callback) {
   options.isBundle = true;
 
   runSequence(
-    'build',
-    ['build-sfx'],
+    'clean',
+    'lint',
+    ['copy-images', 'copy-fonts'],
+    ['build-html', 'build-index', 'build-static', 'build-sass'],
     callback
   );
 });
