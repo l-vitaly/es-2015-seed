@@ -8,12 +8,13 @@
   'utils/helpers';
 
 @import
-  'base/base',
   'base/reset',
-  'base/typography';
+  'base/typography',
+  'base/base';
 
 @import
   'layout/header',
+  'layout/main',
   'layout/footer';
 
 //@import
