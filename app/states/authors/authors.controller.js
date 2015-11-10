@@ -19,7 +19,8 @@ export function authorsRoute(stateProvider) {
   stateProvider
     .state('authors', {
       url: '/authors',
-      templateUrl: 'scripts/states/authors/authors.html',
+      parent: 'layoutMain',
+      templateUrl: 'states/authors/authors.html',
       controller: 'AuthorsController',
       controllerAs: 'ctrlAuthors'
     })
