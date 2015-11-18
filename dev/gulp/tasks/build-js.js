@@ -6,6 +6,9 @@ var assign = Object.assign || require('object.assign');
 var paths = require('../paths');
 var options = require('../options');
 
+/**
+ * Build development js files
+ */
 gulp.task('build-js', function () {
   return gulp.src(paths.scripts)
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))

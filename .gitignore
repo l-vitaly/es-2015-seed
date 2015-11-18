@@ -8,3 +8,4 @@ npm-debug.log
 /galen-reports
 /docker-compose.yml
 /dist
+/app/templates.js

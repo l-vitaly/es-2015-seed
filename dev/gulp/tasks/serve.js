@@ -1,14 +1,13 @@
-/**
- * Serve the site with live reload
- **/
-
 var $ = require('gulp-load-plugins')();
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var options = require('../options');
 var paths = require('../paths');
 
-gulp.task('serve', ['build'], function () {
+/**
+ * Serve the site with live reload
+ **/
+gulp.task('serve', ['build'], function() {
 
   browserSync({
     proxy: {
@@ -16,32 +15,27 @@ gulp.task('serve', ['build'], function () {
     }
   });
 
-  $.watch(paths.index, $.batch(function (event, callback) {
-    gulp.start('build-index', callback);
-  }));
+  $.watch(paths.index, function() {
+    gulp.start('build-index');
+  });
 
-  $.watch(paths.html, $.batch(function (event, callback) {
-    gulp.start('build-html', callback);
-  }));
+  $.watch(paths.html, function() {
+    gulp.start('build-html');
+  });
 
-  $.watch(paths.scripts, $.batch(function (event, callback) {
-    gulp.start('build-js', callback);
-  }));
+  $.watch(paths.scripts, function() {
+    gulp.start('build-js');
+  });
 
-  $.watch(paths.sass, $.batch(function (event, callback) {
-    gulp.start('build-sass', callback);
-  }));
+  $.watch(paths.sass, function() {
+    gulp.start('build-sass');
+  });
 
-  $.watch(paths.fonts, $.batch(function (event, callback) {
-    gulp.start('clean-fonts', function () {
-      gulp.start('copy-fonts', callback);
-    });
-  }));
+  $.watch(paths.fonts, function() {
+    gulp.start('copy-fonts');
+  });
 
-  $.watch(paths.images, $.batch(function (event, callback) {
-    gulp.start('clean-images', function () {
-      gulp.start('copy-images', callback);
-    });
-  }));
-
+  $.watch(paths.images, function() {
+    gulp.start('copy-images');
+  });
 });

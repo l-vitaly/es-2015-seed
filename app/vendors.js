@@ -8,11 +8,11 @@ import 'angular-ui-router';
 import 'angular-material';
 
 export const vendors = [
-  'ui.router',
-  'ngMessages',
-  'ngSanitize',
-  'ngCookies',
   'ngAnimate',
+  'ngCookies',
+  'ngSanitize',
+  'ngMessages',
   'ngAria',
+  'ui.router',
   'ngMaterial'
 ];
