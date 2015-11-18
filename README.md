@@ -33,21 +33,21 @@ Example:
 export BASE_HREF="/web-app/" && ./gulp build
 ```
 
-# Build Bundle
+# Build
  
-To build the bundle, execute the command:
+### Build the bundle
 
 ``` console
 ./gulp bundle
 ```
 
-# Build development: 
+### Build the development 
 
 ``` console
 ./gulp build
 ```
 
-# Live Reload
+### Run live reload
 
 ``` console
 gulp
@@ -62,6 +62,14 @@ server {
     index index.html;
 
     include mime.types;
+
+    location ~ ^/dist/ {
+        break;
+      }
+
+      location / {
+        try_files $uri $uri/ /index.html =404;
+      }
 }
 ```
 
