@@ -2,6 +2,7 @@ var $ = require('gulp-load-plugins')();
 var argv = $.util.env;
 var isDebug = !!argv.debug;
 var cacheBust = Math.round(new Date() / 1000);
+var defaultGulpServerUrl = 'http://docker.dev:1095';
 
 module.exports = {
   cacheBust: cacheBust,
@@ -29,7 +30,7 @@ module.exports = {
     stage:2
   },
   browserSync: {
-    localUrl: process.env.GULP_SERVE_URL ? process.env.GULP_SERVE_URL : 'http://192.168.99.100:16500'
+    localUrl: process.env.GULP_SERVE_URL ? process.env.GULP_SERVE_URL : defaultGulpServerUrl
   },
   minifyHtml: {
     empty: true,
