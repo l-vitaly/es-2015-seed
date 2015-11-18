@@ -1,7 +1,5 @@
-import appModulePromise from './app';
+import appModule from './app';
 
 angular.element(document).ready(function() {
-  appModulePromise.then(function(appModule) {
-    angular.bootstrap(document, [appModule.name]);
-  });
+  angular.bootstrap(document, [appModule.name]);
 });

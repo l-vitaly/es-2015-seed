@@ -9,7 +9,6 @@ System.config({
   paths: {
     "*": "dist/*.js",
     "app/*": "app/*.js",
-    "*.scss": "dist/css/*.scss",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
@@ -19,13 +18,13 @@ System.config({
     "angular-animate": "github:angular/bower-angular-animate@1.4.7",
     "angular-aria": "github:angular/bower-angular-aria@1.4.7",
     "angular-cookies": "github:angular/bower-angular-cookies@1.4.7",
-    "angular-material": "github:angular/bower-material@1.0.0-rc3-master-818652d",
+    "angular-material": "github:angular/bower-material@1.0.0-rc4-master-9d52697",
     "angular-messages": "github:angular/bower-angular-messages@1.4.7",
     "angular-sanitize": "github:angular/bower-angular-sanitize@1.4.7",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
-    "babel": "npm:babel-core@5.8.33",
-    "babel-runtime": "npm:babel-runtime@5.8.29",
-    "clean-css": "npm:clean-css@3.4.6",
+    "babel": "npm:babel-core@5.8.34",
+    "babel-runtime": "npm:babel-runtime@5.8.34",
+    "clean-css": "npm:clean-css@3.4.8",
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.19",
     "json": "github:systemjs/plugin-json@0.1.0",
@@ -48,7 +47,7 @@ System.config({
     "github:angular/bower-angular-sanitize@1.4.7": {
       "angular": "github:angular/bower-angular@1.4.7"
     },
-    "github:angular/bower-material@1.0.0-rc3-master-818652d": {
+    "github:angular/bower-material@1.0.0-rc4-master-9d52697": {
       "angular": "github:angular/bower-angular@1.4.7",
       "angular-animate": "github:angular/bower-angular-animate@1.4.7",
       "angular-aria": "github:angular/bower-angular-aria@1.4.7",
@@ -58,7 +57,7 @@ System.config({
       "assert": "npm:assert@1.3.0"
     },
     "github:jspm/nodelibs-buffer@0.1.0": {
-      "buffer": "npm:buffer@3.5.1"
+      "buffer": "npm:buffer@3.5.2"
     },
     "github:jspm/nodelibs-constants@0.1.0": {
       "constants-browserify": "npm:constants-browserify@0.0.1"
@@ -131,7 +130,7 @@ System.config({
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
-    "npm:babel-runtime@5.8.29": {
+    "npm:babel-runtime@5.8.34": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:browserify-aes@1.0.5": {
@@ -182,7 +181,7 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:buffer@3.5.1": {
+    "npm:buffer@3.5.2": {
       "base64-js": "npm:base64-js@0.0.8",
       "ieee754": "npm:ieee754@1.1.6",
       "is-array": "npm:is-array@1.0.1"
@@ -193,7 +192,7 @@ System.config({
       "stream": "github:jspm/nodelibs-stream@0.1.0",
       "string_decoder": "github:jspm/nodelibs-string_decoder@0.1.0"
     },
-    "npm:clean-css@3.4.6": {
+    "npm:clean-css@3.4.8": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "commander": "npm:commander@2.8.1",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
