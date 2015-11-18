@@ -35,19 +35,19 @@ export BASE_HREF="/web-app/" && ./gulp build
 
 # Build
  
-### Build the bundle
+### Bundle for production
 
 ``` console
 ./gulp bundle
 ```
 
-### Build the development 
+### Development 
 
 ``` console
 ./gulp build
 ```
 
-### Run live reload
+### Live reload
 
 ``` console
 gulp
