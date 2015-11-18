@@ -1,5 +1,5 @@
+var $ = require('gulp-load-plugins')();
 var gulp = require('gulp');
-var changed = require('gulp-changed');
 var del = require('del');
 var paths = require('../paths');
 
@@ -8,7 +8,7 @@ var paths = require('../paths');
  */
 gulp.task('copy-images', function () {
   return gulp.src(paths.images)
-    .pipe(changed(paths.images))
+    .pipe($.changed(paths.images))
     .pipe(gulp.dest(paths.output.images));
 });
 

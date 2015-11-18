@@ -8,7 +8,6 @@ var paths = require('../paths');
  */
 gulp.task('copy-fonts', function () {
   return gulp.src(paths.fonts)
-    .pipe(changed(paths.fonts))
     .pipe(gulp.dest(paths.output.fonts));
 });
 
