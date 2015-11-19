@@ -12,7 +12,7 @@ gulp.task('bundle', function (callback) {
   runSequence(
     'clean',
     'lint',
-    ['copy-images', 'copy-fonts'],
+    ['copy-images', 'copy-fonts', 'copy-assets'],
     ['build-html', 'build-index', 'build-sass'],
     'build-static',
     callback
