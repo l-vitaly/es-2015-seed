@@ -13,7 +13,8 @@ gulp.task('bundle', function (callback) {
     'clean',
     'lint',
     ['copy-images', 'copy-fonts'],
-    ['build-html', 'build-index', 'build-static', 'build-sass'],
+    ['build-html', 'build-index', 'build-sass'],
+    'build-static',
     callback
   );
 });
