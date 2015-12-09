@@ -15,8 +15,8 @@ gulp.task('build-static', function(callback) {
 
   builder.loadConfig('./config.js').then(function() {
       return builder.buildStatic('app/bootstrap', paths.output.root + '/app.js', {
-        sourceMaps: options.isDebug,
-        lowResSourceMaps: options.isDebug,
+        sourceMaps: false,
+        lowResSourceMaps: false,
         minify: true
       }).then(function() {
         callback();
