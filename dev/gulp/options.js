@@ -1,13 +1,18 @@
 var $ = require('gulp-load-plugins')();
 var argv = $.util.env;
-var isDebug = !!argv.debug;
+var env = argv.env || 'development';
+var browserSyncLocalUrl = argv.url || 'http://docker.dev:1095';
 var cacheBust = Math.round(new Date() / 1000);
-var defaultGulpServerUrl = 'http://docker.dev:1095';
+var baseHrefMap = {
+  development: '/',
+  staging: '/',
+  production: '/'
+};
 
 module.exports = {
+  baseHref: baseHrefMap[env] || '/',
   cacheBust: cacheBust,
-  isDebug: isDebug,
-  isBundle: false,
+  env: env,
   autoprefixer: {
     browsers: [
       'last 2 versions',
@@ -30,7 +35,7 @@ module.exports = {
     stage:2
   },
   browserSync: {
-    localUrl: process.env.GULP_SERVE_URL ? process.env.GULP_SERVE_URL : defaultGulpServerUrl
+    localUrl: browserSyncLocalUrl
   },
   minifyHtml: {
     empty: true,

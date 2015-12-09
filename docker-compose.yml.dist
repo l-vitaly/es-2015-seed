@@ -1,0 +1,6 @@
+web:
+  extends:
+    file: ./dev/docker/docker-compose-common.yml
+    service: web
+  ports:
+    - "you port here"
