@@ -4,72 +4,90 @@ A quick start seed for web development with ECMAScript 2015 and AngularJS + Mate
 
 # Development Installation (OS X)
 
-Install Docker: [http://docs.docker.com/mac/started](http://docs.docker.com/mac/started)
+## Install Docker
 
-Installation NodeJs:
+[http://docs.docker.com/mac/started](http://docs.docker.com/mac/started)
+
+## Installation NodeJS
 
 ``` console
 brew install nodejs
 ```
 
-Run commands:
+## Install Application
 
 ``` console
 git clone git@github.com:vlobchuk/es-2015-seed.git ./project-name
 cd project-name
 npm install 
 ./jspm install
-docker-compose up -d
-export GULP_SERVE_URL=http://you.docker.ip.address:16500
-./gulp serve
 ```
-# Base Href
 
-To set the value of base href, use the environment variable BASE_HREF
+## Run Application:
 
-Example: 
+You can change the url for BrowserSync using the argument --url 
+or change option in ./dev/gulp/options.js set browserSync.localUrl
 
 ``` console
-export BASE_HREF="/web-app/" && ./gulp build
+docker-compose up -d
+./gulp
 ```
 
 # Build
  
-### Bundle for production
+## Build for environment
+
+Avail environments:
+
+- development
+- staging
+- production
+
+Use argument --env for set environment:
 
 ``` console
-./gulp bundle
+./gulp build --env {environment}
 ```
 
-### Development 
-
-``` console
-./gulp build
-```
-
-### Live reload
+## Live reload
 
 ``` console
 gulp
+```
+
+# Deploy
+
+Modify deployment script before run.
+
+## Staging
+
+``` console
+./dev/deploy/staging.sh
+```
+
+## Production
+
+``` console
+./dev/deploy/production.sh
 ```
 
 # Nginx Setup 
 
 ``` nginx
 server {
-    listen 80;
-    root /var/www;
-    index index.html;
+  listen 80;
+  root /var/www;
+  index index.html;
 
-    include mime.types;
+  include mime.types;
 
-    location ~ ^/dist/ {
-        break;
-      }
+  location ~ ^/dist/ {
+    break;
+  }
 
-      location / {
-        try_files $uri $uri/ /index.html =404;
-      }
+  location / {
+    try_files $uri $uri/ /index.html =404;
+  }
 }
 ```
 
@@ -80,18 +98,6 @@ Run tests:
 ``` console
 npm test
 ```
-
-## Galen Tests (Visual Test Driven Development)
-
-To run test on SauceLabs make sure environment variables `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` are set.
-
-#### Running on SauceLabs
-
-`TEST_PREFIX=sl_ npm test`
-
-#### Running Locally
-
-`GALEN_DOMAIN=localhost npm test`
 
 # Gulp Tasks
 
@@ -107,6 +113,7 @@ To run test on SauceLabs make sure environment variables `SAUCE_USERNAME` and `S
 |`gulp build-static`|Build static bundle|
 |`gulp copy-images`|Copy SASS images|
 |`gulp copy-fonts`|Copy SASS fonts|
+|`gulp copy-assets`|Copy vendors assets|
 |`gulp lint`|Run ESLint [http://eslint.org](http://eslint.org)|
 
 # Used Technologies and Components
@@ -121,12 +128,10 @@ To run test on SauceLabs make sure environment variables `SAUCE_USERNAME` and `S
 - Angular Material
 - SASS
 - Gulp
-- Galen
 
 # Author
  
 Vitaly Lobchuk <vn.lobchuk@gmail.com>
-
 
 Frontend&Backend Developer.
 
