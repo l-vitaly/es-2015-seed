@@ -3,11 +3,13 @@ System.config({
   transpiler: "babel",
   babelOptions: {
     "optional": [
-      "runtime"
+      "runtime",
+      "es7.decorators"
     ]
   },
   paths: {
     "*": "dist/*.js",
+    "test/*": "test/*",
     "app/*": "app/*.js",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
@@ -27,6 +29,7 @@ System.config({
     "clean-css": "npm:clean-css@3.4.8",
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.19",
+    "flaky": "github:flakycore/flaky@master",
     "json": "github:systemjs/plugin-json@0.1.0",
     "scss": "github:mobilexag/plugin-sass@0.0.8",
     "systemjs/plugin-json": "github:systemjs/plugin-json@0.1.0",
