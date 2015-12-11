@@ -5,8 +5,7 @@ npm-debug.log
 /jspm_packages
 /node_modules
 /index.html
-/galen-reports
 /docker-compose.yml
 /dist
-/app/templates.js
 /coverage
+/app/templates.js
