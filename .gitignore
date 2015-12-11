@@ -9,3 +9,4 @@ npm-debug.log
 /docker-compose.yml
 /dist
 /app/templates.js
+/coverage
